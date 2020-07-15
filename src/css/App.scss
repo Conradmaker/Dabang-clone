@@ -67,11 +67,15 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .left-menu {
       display: flex;
       align-content: center;
       svg {
         margin-right: 20px;
+      }
+      .menu-toggle {
+        display: none;
       }
       .site-menu {
         display: flex;
@@ -303,6 +307,7 @@ li {
         font-size: 14px;
         & + a {
           .recent-item {
+            text-align: center;
             border: 1px solid $color;
             color: $color;
             display: flex;

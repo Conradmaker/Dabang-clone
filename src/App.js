@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/App.scss";
 import "./css/App_small.scss";
+import { TiThMenuOutline } from "react-icons/ti";
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const onToggle = () => {
+    setOpen(!open);
+  };
   return (
     <div className="section">
       <section className="section section--nav-bar">
@@ -24,13 +29,16 @@ function App() {
                 </g>
               </svg>
             </a>
-            <div className="site-menu">
+            <TiThMenuOutline className="menu-toggle " onClick={onToggle} />
+
+            <div className={!open ? "site-menu toggle" : "site-menu"}>
               <a href="/">프로중개사 사이트</a>
               <div></div>
               <a href="/">다방허브 사이트</a>
             </div>
           </div>
-          <div className="right-menu">
+
+          <div className={!open ? "right-menu toggle" : "right-menu"}>
             <ul className="util-list">
               <li>방찾기</li>
               <li>분양</li>
@@ -252,10 +260,7 @@ function App() {
             <a href="/">
               <div className="guide-item item1">
                 <h5>다방 이야기</h5>
-                <p>
-                  다방
-                  <br /> 허위매물&nbsp;예방&nbsp;5계명
-                </p>
+                <p>다방 허위매물&nbsp;예방&nbsp;5계명</p>
                 <svg width="28" height="28" viewBox="0 0 28 28">
                   <g fill="none" fill-rule="evenodd" stroke="#396bf3">
                     <path d="M12 10l4 4-4 4"></path>
@@ -267,11 +272,7 @@ function App() {
             <a href="/">
               <div className="guide-item item1">
                 <h5>다방 이야기</h5>
-                <p>
-                  다방앱으로 <br />
-                  나에게 꼭맞는 <br />
-                  방찾는 방법
-                </p>
+                <p>다방앱으로 나에게 꼭맞는 방찾는 방법</p>
                 <svg width="28" height="28" viewBox="0 0 28 28">
                   <g fill="none" fill-rule="evenodd" stroke="#396bf3">
                     <path d="M12 10l4 4-4 4"></path>
@@ -284,11 +285,7 @@ function App() {
               {" "}
               <div className="guide-item item1">
                 <h5>다방 이야기</h5>
-                <p>
-                  다방앱으로 <br />
-                  아파트 청약정보
-                  <br /> 한번에 보기!
-                </p>
+                <p>다방앱으로 아파트 청약정보 한번에 보기!</p>
                 <svg width="28" height="28" viewBox="0 0 28 28">
                   <g fill="none" fill-rule="evenodd" stroke="#396bf3">
                     <path d="M12 10l4 4-4 4"></path>
@@ -300,11 +297,7 @@ function App() {
             <a href="/">
               <div className="guide-item item2">
                 <h5>부동산 상식</h5>
-                <p>
-                  알아두면 좋은 <br />
-                  부동산 용어, <br />
-                  행복주택 기본용어!
-                </p>
+                <p>알아두면 좋은 부동산 용어, 행복주택 기본용어!</p>
                 <svg width="28" height="28" viewBox="0 0 28 28">
                   <g fill="none" fill-rule="evenodd" stroke="#8b8b8b">
                     <path d="M12 10l4 4-4 4"></path>
@@ -316,10 +309,7 @@ function App() {
             <a href="/">
               <div className="guide-item item2">
                 <h5>부동산 상식</h5>
-                <p>
-                  임대차 계약서
-                  <br /> 작성 시<br /> 이것만 알아두세요~
-                </p>
+                <p>임대차 계약서 작성 시이것만 알아두세요~</p>
                 <svg width="28" height="28" viewBox="0 0 28 28">
                   <g fill="none" fill-rule="evenodd" stroke="#8b8b8b">
                     <path d="M12 10l4 4-4 4"></path>
