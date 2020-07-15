@@ -30,6 +30,7 @@ a {
   }
 }
 li {
+  display: inline-block;
   cursor: pointer;
   &:hover {
     color: $color;
@@ -45,9 +46,6 @@ li {
   bottom: 30px;
   z-index: 8;
   border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
   border-radius: 36px;
   span {
     margin-left: 5px;
@@ -300,27 +298,29 @@ li {
         align-items: center;
         justify-content: center;
         height: 186px;
-        border: 1.3px dotted #ebebeb;
+        border: 1.3px dotted #d6d6d6;
         color: #c5c5c5;
         font-size: 14px;
-        &:nth-child(4) {
-          border: 1px solid $color;
-          color: $color;
-          display: flex;
-          flex-direction: column;
-          button {
-            margin: 10px;
-            background: $color;
-            outline: none;
-            border: none;
-            width: 35px;
-            height: 35px;
-            color: white;
-            font-size: 30px;
+        & + a {
+          .recent-item {
+            border: 1px solid $color;
+            color: $color;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
+            flex-direction: column;
+            button {
+              margin: 10px;
+              background: $color;
+              outline: none;
+              border: none;
+              width: 35px;
+              height: 35px;
+              color: white;
+              font-size: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+            }
           }
         }
       }

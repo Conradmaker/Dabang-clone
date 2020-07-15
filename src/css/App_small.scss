@@ -1,0 +1,134 @@
+@media (max-width: 1024px) {
+  .search-button {
+    display: none;
+  }
+  html,
+  section {
+    width: 100%;
+  }
+  .inner {
+    max-width: none;
+  }
+  .section--nav-bar {
+    .inner {
+      flex-direction: column;
+      .left-menu {
+        flex-direction: column;
+        .logo {
+          margin: 0 auto;
+          padding: 10px;
+        }
+        svg {
+          margin-right: 0;
+        }
+        .site-menu {
+          justify-content: center;
+        }
+      }
+      .right-menu {
+        flex-direction: column;
+        .util-list {
+          flex-direction: column;
+          li {
+            margin-left: 0;
+            margin-bottom: 10px;
+          }
+        }
+        .sign-list {
+          margin-left: 0;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  .section--main {
+    min-width: auto;
+    padding-top: 55px;
+    margin: 0;
+    .title {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    #search-form {
+      width: 90%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      svg {
+        display: none;
+      }
+      input {
+        width: 100%;
+        font-size: 16px;
+        height: 25px;
+        margin: 10px auto;
+        border-left: none;
+      }
+      button {
+        margin: 5px;
+        padding: 5px;
+        font-size: 16px;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .section--room-search-solution {
+    margin: 100px auto;
+    .summary-solution {
+      .title-solution {
+        font-size: 20px;
+      }
+      .description-solution {
+        font-size: 14px;
+      }
+    }
+    .tiles {
+      margin: 30px 10px 0 10px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      .tile {
+        &:hover {
+          background: rgb(204, 204, 204);
+        }
+      }
+    }
+  }
+
+  .section--recent-room {
+    .inner {
+      margin: 40px 10px;
+      .summary {
+        .summary-positioner {
+          font-size: 20px;
+          align-items: center;
+          span {
+            padding-right: 10px;
+            border-right: 1px solid #e5e5e5;
+          }
+          p {
+            padding-left: 10px;
+            color: #c5c5c5c5;
+          }
+        }
+        p {
+          margin: 10px 0;
+          color: #666666;
+        }
+      }
+      .tiles-recent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+      }
+    }
+  }
+  .section--information ul {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
